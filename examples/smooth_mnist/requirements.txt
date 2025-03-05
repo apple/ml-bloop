@@ -1,0 +1,5 @@
+objprint
+optax
+tensorflow
+tensorflow_datasets
+matplotlib

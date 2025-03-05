@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bloop"
+description = "multitask learning with an ema"
+requires-python = ">=3.9"
+version = "1.0.0"
+readme = {file = "README.md", content-type = "text/markdown"}
+license = {file = "LICENSE"}
+authors = [{name = "Apple"}]
+dependencies = ["jax>=0.4.0", "flax"]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[tool.black]
+line-length = 100
+target-version = ["py39"]
+
+[tool.isort]
+profile = "black"
+line_length = 100
+sections = ["FUTURE", "STDLIB", "THIRDPARTY", "NUMERIC", "FIRSTPARTY", "LOCALFOLDER"]
+known_numeric = ["jax", "flax"]
